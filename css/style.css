@@ -1,0 +1,185 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el menú de navegación fijo */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: 0.3s;
+}
+
+/* Menú desplegable y desplazable */
+#menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Posición inicial fuera de la vista */
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: left 0.3s ease; /* Animación de desplazamiento */
+}
+#menu.show {
+    left: 0; /* Mueve el menú a la vista */
+}
+main {
+    padding: 20px;
+    margin-top: 60px; /* Ajusta este valor según la altura del menú */
+    transition: margin-left 0.3s ease;
+}
+main.shifted {
+    margin-left: 250px; /* Desplaza el contenido principal hacia la derecha */
+}
+#menu li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+#menu a:hover {
+    background-color: #555;
+}
+
+#navbar a {
+    color: #fff; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    margin: 0 15px; /* Espaciado entre los enlaces */
+    padding: 10px 15px; /* Espaciado interno de los enlaces */
+    display: inline-block; /* Muestra los enlaces en línea y permite padding */
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de reflejo al pasar el cursor */
+#navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Ajusta esta distancia según sea necesario */
+    width: 100%;
+    height: 2px; /* Altura del reflejo */
+    background: rgba(255, 255, 255, 0.5); /* Color del reflejo */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+#navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+#navbar a:hover {
+    filter: brightness(1.2); /* Efecto de brillo para el enlace */
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px;
+    margin-top: 60px; /* Ajusta este valor según la altura del menú */
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-contact {
+    padding: 10px;
+}
+
+/* Estilos para la imagen */
+#div-imagen {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#img-titulo {
+    max-width: 30%;
+    height: auto;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    #navbar a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .footer-contact {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    #img-titulo {
+        max-width: 100%; /* Ajusta la imagen al tamaño del contenedor en dispositivos móviles */
+    }
+
+    #menu {
+        top: 60px; /* Ajusta según la altura    CCdel menú */
+        left: -100%; /* Fuera de la vista al inicio */
+        width: 200px
+        background-color: #333;
+    }
+    main.shifted {
+        margin-left: 200px; /* Ajusta el desplazamiento del contenido principal */
+    }
+
+    #menu.show {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
