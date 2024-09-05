@@ -122,16 +122,6 @@ main.shifted {
     filter: brightness(1.2); /* Efecto de brillo para el enlace */
 }
 
-/* Estilos para el contenido principal */
-main {
-    padding: 20px;
-    margin-top: 60px; /* Ajusta este valor según la altura del menú */
-}
-
-.project {
-    margin-bottom: 20px;
-}
-
 /* Estilos para el pie de página */
 footer {
     background-color: #333;
@@ -189,6 +179,44 @@ footer {
     .footer-contact {
         text-align: left;
         padding-left: 10px;
+    }
+
+    #contacto {
+        padding: 15px; /* Ajusta el padding en dispositivos móviles */
+        background-color: #fff; /* Fondo blanco para mayor contraste */
+        color: #333; /* Color del texto en negro */
+        margin: 20px 0;
+        border-radius: 8px; /* Bordes redondeados */
+    }
+
+    form {
+        display: block; /* Cambia a bloque para evitar problemas de superposición */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 16px; /* Ajusta el tamaño de fuente para campos de entrada */
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px; /* Bordes redondeados en campos de entrada */
+        box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+    }
+
+    input[type="submit"] {
+        width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #555;
     }
 
     #img-titulo {
