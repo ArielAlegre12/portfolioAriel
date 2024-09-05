@@ -1,0 +1,4 @@
+[build]
+  base = "html"  # Base directory donde se encuentra tu archivo index.html
+  publish = "html"  # Carpeta que contiene el archivo index.html
+  command = ""  # No necesitas un comando de compilación
