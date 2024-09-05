@@ -42,7 +42,7 @@ header {
     transition: 0.3s;
 }
 
-/* Menú desplegable y desplazable */
+/* Menú desplegable y desplazable para dispositivos móviles */
 #menu {
     list-style: none;
     margin: 0;
@@ -155,7 +155,31 @@ footer {
     height: auto;
 }
 
-/* Media query para dispositivos móviles */
+/* Media query para pantallas grandes (más de 768px) */
+@media (min-width: 769px) {
+    /* Muestra el menú directamente en pantallas grandes */
+    #menu {
+        position: relative;
+        left: 0;
+        width: auto;
+        height: auto;
+        display: flex; /* Alinea los ítems horizontalmente */
+        flex-direction: row; /* Asegúrate de que los elementos estén en línea */
+        justify-content: center; /* Centra el menú */
+        background-color: transparent; /* No es necesario que sea fijo ni tenga un fondo */
+    }
+
+    #menu li {
+        margin: 0 15px; /* Espaciado entre los ítems del menú */
+    }
+
+    /* Oculta el menú hamburguesa en pantallas grandes */
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Media query para dispositivos móviles (menos de 768px) */
 @media (max-width: 768px) {
     #navbar a {
         display: block;
