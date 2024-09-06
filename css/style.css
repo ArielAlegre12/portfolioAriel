@@ -241,4 +241,11 @@ footer {
     .menu-toggle {
         display: block;
     }
+    
+}
+
+#studio-ghibli-captura{
+    text-align: center;
+    width: 90%;
+    height: auto;
 }
