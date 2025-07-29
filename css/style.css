@@ -286,3 +286,8 @@ footer {
     padding-top: 10px; /* Añadir espaciado interno cuando esté abierto */
     padding-bottom: 10px;
 }
+
+a{
+    color: #fff; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
