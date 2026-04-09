@@ -4,19 +4,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const menu = document.getElementById('menu');
     const menuLinks = document.querySelectorAll('#menu a');
 
-    // Abre y cierra el menú al hacer clic en el icono
+    //abre y cierra el menú al hacer clic en el icono
     menuToggle.addEventListener('click', function() {
         menu.classList.toggle('show');
     });
 
-    // Cierra el menú cuando se hace clic en un enlace
+    //cierra el menú cuando se hace clic en un enlace
     menuLinks.forEach(link => {
         link.addEventListener('click', function() {
             menu.classList.remove('show');
         });
     });
 
-    // Funcionalidad de los colapsibles (Sobre mí, Proyectos, Contacto)
+    //funcionalidad de los colapsibles (Sobre mí, Proyectos, Contacto)
     const collapsibles = document.querySelectorAll('.collapsible');
 
     collapsibles.forEach((collapsible) => {
@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const content = this.nextElementSibling;
 
             if (content.style.maxHeight) {
-                // Si el contenido está visible, colapsarlo
+                //si el contenido está visible, colapsarlo
                 content.style.maxHeight = null;
             } else {
-                // Si el contenido está oculto, expandirlo
+                //si el contenido está oculto, expandirlo
                 content.style.maxHeight = content.scrollHeight + "px";
             }
         });
